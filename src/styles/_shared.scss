@@ -1,0 +1,32 @@
+$bg-page: var(--bg-page);
+$bg-surface: var(--bg-surface);
+$bg-alternate: var(--bg-alternate);
+$fg-heading: var(--fg-heading);
+$fg-pri: var(--fg-pri);
+$fg-sec: var(--fg-sec);
+$fg-tet: var(--fg-tet);
+$fg-red: var(--fg-red);
+$fg-green: var(--fg-green);
+$fg-tf-orange: var(--fg-tf-orange);
+$border-soft: var(--border-soft);
+$border-category: var(--border-category);
+$border-heading: var(--border-heading);
+
+@mixin t-pri {
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@mixin t-sec {
+    @include t-pri;
+    font-size: 12px;
+}
+
+@mixin t-code {
+    font-family: "Azeret Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 0.9em;
+}

@@ -1,0 +1,66 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    --bg-page: #f0f0f0;
+    --bg-surface: #fff;
+    --bg-alternate: #{rgba(#000, 0.07)};
+    --fg-heading: #{rgba(#000, 0.9)};
+    --fg-pri: #{rgba(#000, 0.85)};
+    --fg-sec: #{rgba(#000, 0.6)};
+    --fg-tet: #{rgba(#000, 0.4)};
+    --fg-red: #c60000;
+    --fg-green: #048500;
+    --fg-tf-orange: #b35215;
+    --border-soft: 1px solid #{rgba(#000, 0.15)};
+    --border-category: 1px solid #{rgba(#000, 0.6)};
+    --border-heading: 2px solid #{rgba(#000, 0.8)};
+
+    &.dark {
+        color-scheme: dark;
+        --bg-page: #101010;
+        --bg-surface: #212121;
+        --bg-alternate: #{rgba(#fff, 0.05)};
+        --fg-heading: #{rgba(#fff, 0.85)};
+        --fg-pri: #{rgba(#fff, 0.75)};
+        --fg-sec: #{rgba(#fff, 0.55)};
+        --fg-tet: #{rgba(#fff, 0.4)};
+        --fg-red: #bd5050;
+        --fg-green: #409c3d;
+        --fg-tf-orange: #ef9849;
+        --border-soft: 1px solid #{rgba(#fff, 0.1)};
+        --border-category: 1px solid #{rgba(#fff, 0.2)};
+        --border-heading: 2px solid #{rgba(#fff, 0.3)};
+    }
+}
+
+html {
+    overflow: auto;
+    background-color: $bg-page;
+}
+
+body {
+    @include t-pri;
+    color: $fg-pri;
+}
+
+code {
+    @include t-code;
+}
+
+.sec {
+    @include t-sec;
+    color: $fg-sec;
+}
+
+.fg-tf-orange {
+    color: $fg-tf-orange;
+}
+
+.fg-sec {
+    color: $fg-sec;
+}

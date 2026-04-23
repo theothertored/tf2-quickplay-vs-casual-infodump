@@ -1,0 +1,202 @@
+@use "@/styles/shared.scss" as *;
+
+.feature-comparison-table-root {
+    padding: 24px;
+    width: fit-content;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: $fg-heading;
+
+    > div {
+        margin-top: 8px;
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.sbmm-hl {
+    color: rgb(23, 39, 183);
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: fit-content;
+
+    // column config
+    > colgroup {
+        &.header {
+            > col:nth-child(1) {
+                width: 100px;
+            }
+
+            > col:nth-child(2) {
+                border-right: $border-heading;
+                width: 250px;
+                font-weight: bold;
+            }
+        }
+
+        &.systems {
+            > col {
+                width: 360px;
+            }
+        }
+
+        &.sbmm {
+            > col {
+                width: 200px;
+
+                &:first-child {
+                    border-left: $border-category;
+                }
+            }
+        }
+
+        &.qp-improvements {
+            > col {
+                width: 200px;
+
+                &:first-child {
+                    border-left: $border-category;
+                }
+            }
+        }
+
+        &.comtress {
+            > col {
+                width: 360px;
+                border-left: $border-category;
+            }
+        }
+
+        // soft border for inside column boundaries
+        col:not(:first-child) {
+            border-left: $border-soft;
+        }
+    }
+
+    // row config
+    tr {
+
+        &.category-start {
+            > td {
+                border-top: $border-category;
+
+                &:first-child {
+                    text-align: center;
+                    color: $fg-sec;
+                    background: none !important;
+                    font-weight: normal;
+                    padding: 16px;
+
+                    + td {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        &:not(.category-start) {
+            > td:first-child {
+                font-weight: bold;
+            }
+        }
+
+        // soft border for inside row boundaries
+        &:not(:first-child) {
+            border-top: $border-soft;
+        }
+
+        &:nth-child(2n) > td:not([rowspan]) {
+            background-color: $bg-alternate;
+        }
+    }
+
+    // cell config
+    th, td {
+        padding: 6px 6px;
+
+        > .sec {
+            margin-top: 4px;
+        }
+
+        &[rowspan] {
+            background-color: transparent;
+        }
+    }
+
+    // header cell config
+    th {
+        border-bottom: $border-heading;
+        text-align: left;
+
+        > .title, > .sec {
+            display: inline-block;
+        }
+
+        > .sec {
+            margin-left: 8px;
+        }
+
+        &:first-child {
+            text-align: center;
+        }
+    }
+
+    &:not(.layer-sbmm-notes) {
+        .sbmm-note {
+            display: none;
+        }
+    }
+
+    &:not(.layer-comtress) {
+        > colgroup.comtress {
+            visibility: collapse;
+
+            > col {
+                border-left: none;
+            }
+        }
+    }
+
+    &:not(.layer-sbmm) {
+        > colgroup.sbmm {
+            visibility: collapse;
+
+            > col {
+                border-left: none;
+            }
+        }
+    }
+
+    // utiltity
+
+    a {
+        color: inherit;
+    }
+
+    &.for-export {
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .diff-severe {
+        color: $fg-red;
+
+        &:before {
+            content: "⚠";
+            margin-right: 4px;
+        }
+    }
+
+    .diff-minor {
+        color: $fg-green;
+    }
+}

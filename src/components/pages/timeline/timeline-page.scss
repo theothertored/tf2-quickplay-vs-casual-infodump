@@ -1,0 +1,42 @@
+@use "@/styles/shared.scss" as *;
+
+.timeline-page-root {
+
+    > header {
+        padding: 16px;
+        border-bottom: $border-category;
+    }
+
+    > main {
+
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        width: fit-content;
+        // max-width: 600px;
+
+        @mixin hide($name) {
+            &.hide-#{$name} {
+                .tf2-update.#{$name} {
+                    display: none;
+                }
+            }
+        }
+
+        @include hide(major);
+        @include hide(minor);
+        @include hide(patch);
+    }
+}
+
+h1 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 24px;
+    align-self: stretch;
+    color: $fg-heading;
+
+    > div {
+        margin-top: 8px;
+    }
+}
