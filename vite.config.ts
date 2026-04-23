@@ -21,5 +21,8 @@ export default defineConfig({
                 additionalData: `@use "@/styles/shared.scss" as *;`,
             }
         }
+    },
+    build: {
+        outDir: 'docs',
     }
 });
