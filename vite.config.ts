@@ -10,6 +10,7 @@ export default defineConfig({
         vue(),
         vueDevTools(),
     ],
+    base: '/tf2-quickplay-vs-casual-infodump/',
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))
