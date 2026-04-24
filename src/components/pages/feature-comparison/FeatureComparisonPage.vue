@@ -336,7 +336,7 @@ const {
                     <td v-if="sbmm" class="sbmm diff-minor">
                         Individual round outcomes matter less
                     </td>
-                    <td v-if="comtress" class="comtress">150 seconds at server start, down to 30s on 7v7, ends instantly on 9v9</td>
+                    <td v-if="comtress" class="comtress">150 seconds at server start, down to 30s on 7v7, ends instantly on 9v9 (or on 6v6 after 90 seconds)</td>
                 </tr>
                 <tr>
                     <td>Next map vote</td>
@@ -357,7 +357,7 @@ const {
                     <td v-if="qpImprovements" class="qp-improvements"></td>
                     <!-- sbmm rowspan -->
                     <td v-if="sbmm" class="sbmm diff-type"></td>
-                    <td v-if="comtress" class="comtress">Same map (with server reload) or any map in gamemode</td>
+                    <td v-if="comtress" class="comtress">Extend current (no server reload) or any map in gamemode</td>
                 </tr>
 
                 <tr class="category-start">
@@ -419,7 +419,8 @@ const {
                     </td>
                     <td v-if="sbmm" class="sbmm diff-minor">No need to preserve initial teams</td>
                     <td v-if="comtress" class="comtress">
-                        <Yes />
+                        <Yes /> 
+                        <span class="sec">(+8 additional spectator slots)</span>
                     </td>
                 </tr>
                 <tr>
