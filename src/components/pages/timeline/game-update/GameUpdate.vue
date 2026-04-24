@@ -64,7 +64,7 @@ function daysDiffToString(d: number)
         return `${d} day${d === 1 ? '' : 's'} later`;
     else
     {
-        const y = (d / 365).toFixed(1);
+        const y = (d / 365).toFixed(1).replace('.0', '');
         return `${y} year${y === '1' ? '' : 's'} later`;
     }
 }
