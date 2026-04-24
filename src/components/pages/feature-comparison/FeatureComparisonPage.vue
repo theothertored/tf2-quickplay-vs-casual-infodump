@@ -366,8 +366,7 @@ const {
                         <span class="sec">(uses current game player score, voted for or automatic on team score difference of 2)</span>
                     </td>
                     <td>
-                        Between matches
-                        <span class="sec">(uses player MMR, minimal effect since MMR was used for forming the teams in the first place)</span>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/ValveSoftware/source-sdk-2013/blob/3300848d8a25ef6403c91f82a4cd97d6daefbc06/src/game/server/tf/tf_gc_server.cpp#L147">Between matches</a> <span class="sec">(uses player MMR, minimal effect since MMR was used for forming the teams in the first place)</span>
                     </td>
                     <td v-if="qpImprovements" class="qp-improvements"></td>
                     <td v-if="sbmm" class="sbmm">
@@ -390,7 +389,7 @@ const {
                     </td>
                     <td>
                         <Yes />
-                        <span class="sec">(<a target="_blank" href="https://github.com/ValveSoftware/source-sdk-2013/blob/3300848d8a25ef6403c91f82a4cd97d6daefbc06/src/game/server/tf/tf_autobalance.cpp#L200-L280">uses player MMR</a>, doesn't switch slots reserved for unconnected players)</span>
+                        <span class="sec">(<a target="_blank" rel="noopener noreferrer" href="https://github.com/ValveSoftware/source-sdk-2013/blob/3300848d8a25ef6403c91f82a4cd97d6daefbc06/src/game/server/tf/tf_autobalance.cpp#L200-L280">uses player MMR</a>, doesn't switch slots reserved for unconnected players)</span>
                     </td>
                     <td v-if="qpImprovements" class="qp-improvements"></td>
                     <td v-if="sbmm" class="sbmm">
@@ -428,7 +427,7 @@ const {
                     </td>
                     <td>
                         <Yes />
-                        <span class="sec">(<a target="_blank" href="https://store.steampowered.com/news/38643/">uses Glicko</a>)</span>
+                        <span class="sec">(<a target="_blank" rel="noopener noreferrer" href="https://store.steampowered.com/news/38643/">uses Glicko</a>)</span>
                     </td>
                     <td v-if="qpImprovements" class="qp-improvements"></td>
                     <td v-if="sbmm" class="sbmm diff-type"></td>
