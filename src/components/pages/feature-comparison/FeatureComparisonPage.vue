@@ -301,7 +301,9 @@ const {
                     <td v-if="qpImprovements" class="qp-improvements"></td>
                     <td v-if="sbmm" class="sbmm diff-minor">Coming soon to Casual</td>
                     <td v-if="sbmm" class="sbmm"></td>
-                    <td v-if="comtress" class="comtress"></td>
+                    <td v-if="comtress" class="comtress">
+                        Start on one team, can switch later
+                    </td>
                 </tr>
 
                 <tr class="category-start">
