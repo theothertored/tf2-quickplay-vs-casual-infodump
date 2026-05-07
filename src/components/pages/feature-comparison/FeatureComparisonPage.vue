@@ -118,6 +118,21 @@ const {
 
                 <tr class="category-start">
                     <td rowspan="6">Match-making</td>
+                    <td>Game coordination</td>
+                    <td>
+                        <No /> <span class="sec">(individual-level server finding)</span>
+                    </td>
+                    <td>
+                        <Yes /> <span class="sec">(coordinated matchmaking)</span>
+                    </td>
+                    <td v-if="qpImprovements" class="qp-improvements">
+                       <div class="diff-minor">Quickplay Beta had coordination</div>
+                    </td>
+                    <td v-if="sbmm" class="sbmm"></td>
+                    <td v-if="sbmm" class="sbmm"></td>
+                    <td v-if="comtress" class="comtress"></td>
+                </tr>
+                <tr>
                     <td>Adjustable ping limit</td>
                     <td>
                         <No />
@@ -282,7 +297,7 @@ const {
                         <div class="sbmm-note sec sbmm-hl">&Uparrow; See [3] above</div>
                     </td>
                     <td v-if="qpImprovements" class="qp-improvements">
-                        <div class="diff-minor">There was a beta for adding lobbies to Quickplay</div>
+                        <div class="diff-minor">Quickplay Beta had lobbies</div>
                     </td>
                     <td v-if="sbmm" class="sbmm"></td>
                     <td v-if="sbmm" class="sbmm"></td>
