@@ -165,7 +165,7 @@ const {
 
                 <GameUpdate date="2014-01-23" :level="Lvl.Major" blog-link="https://www.teamfortress.com/post.php?id=12267" wiki-link="https://wiki.teamfortress.com/wiki/January_23,_2014_Patch">
                     <ul>
-                        <li><b>Added Quickplay option to connect only to official Valve servers</b></li>
+                        <li><b>Added Quickplay option to connect only to official Valve servers (enabled by default)</b></li>
                         <li>Prevented game servers from redirecting Quickplay players to alternate servers</li>
                     </ul>
                 </GameUpdate>

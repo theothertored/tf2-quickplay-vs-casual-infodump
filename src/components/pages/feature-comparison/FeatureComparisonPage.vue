@@ -450,7 +450,7 @@ const {
                     <td>
                         <Yes />
                     </td>
-                    <td v-if="qpImprovements" class="qp-improvements"></td>
+                    <td v-if="qpImprovements" class="qp-improvements diff-minor">Could be added to Quickplay</td>
                     <td v-if="sbmm" class="sbmm diff-type"></td>
                     <td v-if="sbmm" class="sbmm diff-type"></td>
                     <td v-if="comtress" class="comtress"></td>
